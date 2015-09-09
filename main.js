@@ -1,4 +1,5 @@
-
+// var playerXWins;
+// var playerYWins;
 
 
 
@@ -35,7 +36,7 @@ function xory (xo) {
 
 		} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
 			alert(xo + " " + "wins");
-			console.log("row2")
+			player
 
 		} else if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
 		alert(xo + " " + "wins");
@@ -67,6 +68,19 @@ function xory (xo) {
 
 xory("x")
 xory("o")
+
+
+
+// function playerWins {
+// 	if (xo === "x") {
+
+// 		playerXWins += playerXWins
+
+// 	} else if (xo === "y") {
+
+// 		playerYWins += playerYWins
+// 	}
+// }
 // winEvaluate(square1,square2,square3,"o");
 // winEvaluate(square4,square5,square6,"x");
 // winEvaluate(square4,square5,square6,"o");

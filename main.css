@@ -33,3 +33,14 @@ body {
 	margin:20px;
 	bottom:3px;
 }
+
+#clear {
+	background:gray;
+}
+
+select {
+	margin:45px;
+	width:100px;
+	font-family:helvetica;
+	font-size:60px;
+}
