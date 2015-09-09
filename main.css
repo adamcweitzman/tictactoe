@@ -1,5 +1,35 @@
-.col-xs-4 {
+body { 
+  background-image: url("pointbreakbackground.jpg");
+  } 
+
+.col-sm-4 {
 	border: 3px solid black;
 	text-align: center;
-	height:200px;
+	height:150px;
+	background:yellow;
+}
+
+.col-xs-10 {
+
+	border: 3px solid black;
+	text-align: center;
+	height:100px;
+	width:992px;
+	left:18px;
+	background:gray;
+
+}
+
+.col-xs-3 {
+
+	border: 3px solid black;
+	text-align: center;
+	height:450px;
+	margin:17px;
+	background:blue;
+}
+
+.col-xs-7 {
+	margin:20px;
+	bottom:3px;
 }
