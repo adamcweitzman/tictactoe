@@ -1,6 +1,8 @@
 body { 
   background-image: url("pointbreakbackground.jpg");
+  background-size:stretch;
   } 
+
 
 .col-sm-4 {
 	border: 3px solid black;
