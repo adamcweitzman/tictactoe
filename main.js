@@ -39,12 +39,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#B1, #B2, #B3').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#B1, #B2, #B3').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 		} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
@@ -53,12 +53,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#C1, #C2, #C3').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#C1, #C2, #C3').prop('selectedIndex',0)
+				clearBoard()
 			}
 			
 
@@ -68,12 +68,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A1, #A2, #A3').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A1, #A2, #A3').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 			// works up to here
@@ -85,12 +85,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A1, #B1, #C1').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A1, #B1, #C1').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 		} else if ($(square2).val() === xo && $(square5).val() === xo && $(square8).val() === xo) {
@@ -100,12 +100,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A2, #B2, #C2').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A2, #B2, #C2').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 		} else if ($(square3).val() === xo && $(square6).val() === xo && $(square9).val() === xo) {
@@ -115,12 +115,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A3, #B3, #C3').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A3, #B3, #C3').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 		} else if ($(square1).val() === xo && $(square5).val() === xo && $(square9).val() === xo) {
@@ -130,12 +130,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A1, #B2, #C3').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A1, #B2, #C3').prop('selectedIndex',0)
+				clearBoard()
 			}
 
 		} else if ($(square3).val() === xo && $(square5).val() === xo && $(square7).val() === xo) {
@@ -145,12 +145,12 @@ function xory (xo) {
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
-				$('#A3, #B2, #C1').prop('selectedIndex',0);
+				clearBoard()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
-				$('#A3, #B2, #C1').prop('selectedIndex',0)
+				clearBoard()
 			}
 		}
 
@@ -170,11 +170,11 @@ getRandomInt()
 
 quoteArray = [];
 
-var ultimate = "If you want the ultimate, you've got to be willing to pay the ultimate price. It's not tragic to die doing what you love. - BODHI"
+var ultimate = "If you want the ultimate, you've got to be willing to pay the ultimate price. It's not tragic to die doing what you love. - Bodhi (Swayze)"
 
-var warchild = "Back off Warchild, seriously. -BODHI (Swayze)"
+var warchild = "Back off Warchild, seriously. -Bodhi (Swayze)"
 
-var young = "Young, dumb and full of... - DR. COX"
+var young = "Young, dumb and full of... - Dr. Cox"
 
 var religion = "Wars of religion always make me laugh because basically you're fighting over who has the best imaginary friend. - Johnny Utah (Keanu)"
 
@@ -204,6 +204,16 @@ return randomQuote
 }
 
 setInterval(function () {$('#quote').html(randoQuote())},9000);
+
+function clearBoard () {
+	$('#A1, #A2, #A3, #B1, #B2, #B3, #C1, #C2, #C3').prop('selectedIndex',0)
+
+}
+
+$('#plus').on('click',function() {
+clearBoard();
+
+});
 
 
 

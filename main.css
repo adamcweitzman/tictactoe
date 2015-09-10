@@ -8,15 +8,15 @@ body {
 
 
 .col-sm-4 {
-	border: 3px solid black;
+	border: 5px ridge red;
 	text-align: center;
 	height:150px;
-	background:yellow;
+/*	background:yellow;*/
 }
 
 .col-xs-10 {
 
-	border: 3px solid black;
+	border: 1px solid black;
 	text-align: center;
 	height:100px;
 	width:992px;
@@ -28,7 +28,7 @@ body {
 
 .col-xs-3 {
 
-	border: 3px solid black;
+	border: 1px solid black;
 	text-align: center;
 	height:450px;
 	margin:17px;
@@ -45,11 +45,13 @@ body {
 }
 
 select {
-	margin:45px;
+	margin:17%;
 	width:100px;
 	font-family:helvetica;
 	font-size:60px;
 	-webkit-appearance: menulist-button;
+	background-color:yellow;
+
 }
 
 #playerXWins {
@@ -75,5 +77,53 @@ select {
 	font-size:20px;
 }
 
+#square1 {
+	border-left:none;
+	border-top:none;
+}
+
+#square2 {
+	border-top:none;
+}
+
+#square3 {
+	border-right:none;
+	border-top:none;
+}
+
+#square4 {
+	border-left:none;
+
+}
+
+#square6 {
+	border-right:none;
+
+}
+
+#square7 {
+	border-left:none;
+	border-bottom:none;
+
+}
+
+#square8 {
+	border-bottom:none;
+
+}
+
+#square9 {
+	border-right:none;
+	border-bottom:none;
+
+}
+
+.xcolor {
+    background-color: red;
+}
+
+option {
+    background-color: red;
+}
 
 
