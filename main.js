@@ -1,6 +1,9 @@
 var playerXWins = 0;
 var playerOWins = 0;
 
+// // $(document).click(function (event) {    		
+//     $('#myDIV:visible').hide();
+// });
 
 
 
@@ -47,7 +50,7 @@ function xory (xo) {
 		} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
 			alert(xo + " " + "wins");
 
-				if (xo === "x") {
+			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				$('#C1, #C2, #C3').prop('selectedIndex',0);
@@ -61,27 +64,94 @@ function xory (xo) {
 
 		} else if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
 		alert(xo + " " + "wins");
-		console.log("row1")
+
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A1, #A2, #A3').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A1, #A2, #A3').prop('selectedIndex',0)
+			}
+
+			// works up to here
 		
 		} else if ($(square1).val() === xo && $(square4).val() === xo && $(square7).val() === xo) {
 		alert(xo + " " + "wins");
 		console.log("row1")
 
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A1, #B1, #C1').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A1, #B1, #C1').prop('selectedIndex',0)
+			}
+
 		} else if ($(square2).val() === xo && $(square5).val() === xo && $(square8).val() === xo) {
 		alert(xo + " " + "wins");
 		console.log("row1")
+
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A2, #B2, #C2').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A2, #B2, #C2').prop('selectedIndex',0)
+			}
 
 		} else if ($(square3).val() === xo && $(square6).val() === xo && $(square9).val() === xo) {
 		alert(xo + " " + "wins");
 		console.log("row1")
 
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A3, #B3, #C3').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A3, #B3, #C3').prop('selectedIndex',0)
+			}
+
 		} else if ($(square1).val() === xo && $(square5).val() === xo && $(square9).val() === xo) {
 		alert(xo + " " + "wins");
 		console.log("row1")
 
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A1, #B2, #C3').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A1, #B2, #C3').prop('selectedIndex',0)
+			}
+
 		} else if ($(square3).val() === xo && $(square5).val() === xo && $(square7).val() === xo) {
 		alert(xo + " " + "wins");
 		console.log("row1")
+
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#A3, #B2, #C1').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#A3, #B2, #C1').prop('selectedIndex',0)
+			}
 		}
 
  	});
@@ -90,36 +160,69 @@ function xory (xo) {
 xory("x")
 xory("o")
 
+function randoQuote () {
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * 8)
+}
+
+getRandomInt()
+
+quoteArray = [];
+
+var ultimate = "If you want the ultimate, you've got to be willing to pay the ultimate price. It's not tragic to die doing what you love. - BODHI"
+
+var warchild = "Back off Warchild, seriously. -BODHI (Swayze)"
+
+var young = "Young, dumb and full of... - DR. COX"
+
+var religion = "Wars of religion always make me laugh because basically you're fighting over who has the best imaginary friend. - Johnny Utah (Keanu)"
+
+var taxpayers = "Do you think that taxpayers would like it Utah, if they knew that they were paying a federal agent to surf and pick up girls? - Dr. Cox"
+
+var snotnose = "Listen you snot-nose little shit, I was takin' shrapnel in Khe Sanh when you were crappin' in your hands and rubbin' it on your face. - Pappas (Gary Busey)"
+
+var rhino = "I'm so hungry I could eat the ass end out of a dead rhino, I should have had you get me three of these things! - Pappas (Gary Busey)"
+
+var change = "22 years. Man, L.A. has changed a lot during that time. The air got dirty and the sex got clean. - Pappas (Gary Busey)"
+
+quoteArray.push(ultimate);
+quoteArray.push(warchild);
+quoteArray.push(young);
+quoteArray.push(religion);
+quoteArray.push(taxpayers);
+quoteArray.push(snotnose);
+quoteArray.push(rhino);
+quoteArray.push(change);
+
+var i = getRandomInt()
+
+var randomQuote = quoteArray[i]
+
+return randomQuote
+
+}
+
+setInterval(function () {$('#quote').html(randoQuote())},9000);
 
 
-// function playerWins {
-// 	if (xo === "x") {
 
-// 		playerXWins += playerXWins
+// Pappas: Listen you snot-nose little shit, I was takin' shrapnel in Khe Sanh when you were crappin' in your hands and rubbin' it on your face.
 
-// 	} else if (xo === "y") {
+// Pappas: I'm so hungry I could eat the ass end out of a dead rhino, I should have had you get me three of these things!
 
-// 		playerYWins += playerYWins
-// 	}
-// }
-// winEvaluate(square1,square2,square3,"o");
-// winEvaluate(square4,square5,square6,"x");
-// winEvaluate(square4,square5,square6,"o");
+// Pappas: 22 years. Man, L.A. has changed a lot during that time. The air got dirty and the sex got clean.
 
-// winEvaluate(square)
-
-// 	$(square1, square2, square3).change(function() {
-
-// 		console.log("work?")
-
-// 		if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
-// 		alert(xo + "wins");
-// 		}
-// 	});
-// };
-
-// winEvaluate('#A1, #A2 , #A3',"x")
+// Johnny Utah: [to Bodhi] You crossed the line. People trusted you and they died. You gotta' go down.
 
 
-// next steps: write if statement for more situations (if three 0's...)
 
+
+
+
+
+// Bodhi: If you want the ultimate, you've got to be willing to pay the ultimate price. It's not tragic to die doing what you love.
+// 8 of 8 found this interesting | Share this
+// Bodhi: Back off Warchild, seriously.
+// 7 of 7 found this interesting | Share this
+// Bodhi: Life sure has a sick sense of humor, doesn't it?

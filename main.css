@@ -49,6 +49,7 @@ select {
 	width:100px;
 	font-family:helvetica;
 	font-size:60px;
+	-webkit-appearance: menulist-button;
 }
 
 #playerXWins {
@@ -67,6 +68,11 @@ select {
 
 #playerOWins {
 	color:yellow;
+}
+
+#quote {
+	color:white;
+	font-size:20px;
 }
 
 
