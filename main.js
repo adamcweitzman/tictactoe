@@ -33,13 +33,16 @@ function xory (xo) {
 		square9 = $('#C3');
 
 
+
 		if ($(square4).val() === xo && $(square5).val() === xo && $(square6).val() === xo) {
 			alert(xo + " " + "wins");
 			
 			if (xo === "x") {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
+				popImageX()
 				clearBoard()
+				
 			
 			} else {
 				playerOWins += 1
@@ -54,11 +57,13 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
 				$('#playerOWins').html(playerOWins)
 				clearBoard()
+
 			}
 			
 
@@ -69,6 +74,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -86,6 +92,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -101,6 +108,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -116,6 +124,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -131,6 +140,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -146,6 +156,7 @@ function xory (xo) {
 				playerXWins += 1
 				$('#playerXWins').html(playerXWins)
 				clearBoard()
+				popImageX()
 			
 			} else {
 				playerOWins += 1
@@ -214,6 +225,29 @@ $('#plus').on('click',function() {
 clearBoard();
 
 });
+
+function popImageX () {
+
+	var xString = "X WINS !!!"
+	// $('#popUpImage').append("<img id='theImg' src='imgres.jpg'/>");
+	
+	$('#popUpImage').show();
+	$('#popUpText').show();
+
+
+	setTimeout(function() {
+    $('#popUpImage').fadeOut('fast');
+	}, 5000);
+
+	setTimeout(function() {
+	$('#popUpText').fadeOut('fast');	
+	}, 5000);
+
+	console.log("hi")
+}
+
+
+
 
 
 
