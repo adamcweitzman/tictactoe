@@ -1,5 +1,5 @@
-// var playerXWins;
-// var playerYWins;
+var playerXWins = 0;
+var playerOWins = 0;
 
 
 
@@ -32,11 +32,32 @@ function xory (xo) {
 
 		if ($(square4).val() === xo && $(square5).val() === xo && $(square6).val() === xo) {
 			alert(xo + " " + "wins");
-			console.log("row3")
+			
+			if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#B1, #B2, #B3').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#B1, #B2, #B3').prop('selectedIndex',0)
+			}
 
 		} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
 			alert(xo + " " + "wins");
-			player
+
+				if (xo === "x") {
+				playerXWins += 1
+				$('#playerXWins').html(playerXWins)
+				$('#C1, #C2, #C3').prop('selectedIndex',0);
+			
+			} else {
+				playerOWins += 1
+				$('#playerOWins').html(playerOWins)
+				$('#C1, #C2, #C3').prop('selectedIndex',0)
+			}
+			
 
 		} else if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
 		alert(xo + " " + "wins");

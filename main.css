@@ -1,7 +1,10 @@
+
+
+
 body { 
   background-image: url("pointbreakbackground.jpg");
   background-size:stretch;
-  } 
+  }
 
 
 .col-sm-4 {
@@ -19,6 +22,7 @@ body {
 	width:992px;
 	left:18px;
 	background:gray;
+	color:yellow;
 
 }
 
@@ -46,3 +50,24 @@ select {
 	font-family:helvetica;
 	font-size:60px;
 }
+
+#playerXWins {
+	color:red;
+}
+
+#wins {
+	color:red;
+	font-size:20px;
+}
+
+#winsO {
+	color:yellow;
+	font-size:20px;
+}
+
+#playerOWins {
+	color:yellow;
+}
+
+
+
