@@ -52,8 +52,10 @@ select {
 	font-size:60px;
 	-webkit-appearance: menulist-button;
 	background-color:yellow;
+	color:blue;
 
 }
+
 
 #playerXWins {
 	color:red;
@@ -143,6 +145,10 @@ option {
 #reload {
 	width:126px;
 	margin:19px;
+}
+
+#xx {
+	background-color:red;
 }
 
 
