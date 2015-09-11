@@ -1,5 +1,6 @@
 var playerXWins = 0;
 var playerOWins = 0;
+var   winner = false;
 
 // // $(document).click(function (event) {    		
 //     $('#myDIV:visible').hide();
@@ -10,7 +11,7 @@ var playerOWins = 0;
 
 
 
-
+ count = 0;
 
 
 
@@ -18,7 +19,13 @@ var playerOWins = 0;
 function xory (xo) {
 
 
+
+
 	$('#A1, #A2, #A3, #B1, #B2, #B3, #C1, #C2, #C3').change(function() {
+
+
+
+
 
 
 
@@ -32,149 +39,179 @@ function xory (xo) {
 		square8 = $('#C2');
 		square9 = $('#C3');
 
+		evalWinner()
+
+		count++
+		if (count >= 18) {
+			alert("CATS GAME");
+			count = 0
+			clearBoard()
+
+		} 
+
+		function evalWinner () {
 
 
-		if ($(square4).val() === xo && $(square5).val() === xo && $(square6).val() === xo) {
-			// alert(xo + " " + "wins");
-			
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				popImageX()
-				clearBoard()
+
+			if ($(square4).val() === xo && $(square5).val() === xo && $(square6).val() === xo) {
+				// alert(xo + " " + "wins");
 				
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					popImageX()
+					clearBoard()
+					winner = true;
+					
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
 
-			}
+				}
 
-		} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
+			} else if ($(square7).val() === xo && $(square8).val() === xo && $(square9).val() === xo) {
+				// alert(xo + " " + "wins");
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+
+				}
+				
+
+			} else if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
 			// alert(xo + " " + "wins");
 
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
 
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
+
+				// works up to here
+			
+			} else if ($(square1).val() === xo && $(square4).val() === xo && $(square7).val() === xo) {
+			// alert(xo + " " + "wins");
+			// console.log("row1")
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
+
+			} else if ($(square2).val() === xo && $(square5).val() === xo && $(square8).val() === xo) {
+			// alert(xo + " " + "wins");
+			// console.log("row1")
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
+
+			} else if ($(square3).val() === xo && $(square6).val() === xo && $(square9).val() === xo) {
+			// alert(xo + " " + "wins");
+			// console.log("row1")
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
+
+			} else if ($(square1).val() === xo && $(square5).val() === xo && $(square9).val() === xo) {
+			// alert(xo + " " + "wins");
+			// console.log("row1")
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
+
+			} else if ($(square3).val() === xo && $(square5).val() === xo && $(square7).val() === xo) {
+			// alert(xo + " " + "wins");
+			// console.log("row1")
+
+				if (xo === "x") {
+					playerXWins += 1
+					$('#playerXWins').html(playerXWins)
+					clearBoard()
+					popImageX()
+					winner = true;
+				
+				} else {
+					playerOWins += 1
+					$('#playerOWins').html(playerOWins)
+					popImageY()
+					clearBoard()
+					winner = true;
+				}
 			}
-			
 
-		} else if ($(square1).val() === xo && $(square2).val() === xo && $(square3).val() === xo) {
-		// alert(xo + " " + "wins");
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-
-			// works up to here
-		
-		} else if ($(square1).val() === xo && $(square4).val() === xo && $(square7).val() === xo) {
-		// alert(xo + " " + "wins");
-		// console.log("row1")
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-
-		} else if ($(square2).val() === xo && $(square5).val() === xo && $(square8).val() === xo) {
-		// alert(xo + " " + "wins");
-		// console.log("row1")
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-
-		} else if ($(square3).val() === xo && $(square6).val() === xo && $(square9).val() === xo) {
-		// alert(xo + " " + "wins");
-		// console.log("row1")
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-
-		} else if ($(square1).val() === xo && $(square5).val() === xo && $(square9).val() === xo) {
-		// alert(xo + " " + "wins");
-		// console.log("row1")
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-
-		} else if ($(square3).val() === xo && $(square5).val() === xo && $(square7).val() === xo) {
-		// alert(xo + " " + "wins");
-		// console.log("row1")
-
-			if (xo === "x") {
-				playerXWins += 1
-				$('#playerXWins').html(playerXWins)
-				clearBoard()
-				popImageX()
-			
-			} else {
-				playerOWins += 1
-				$('#playerOWins').html(playerOWins)
-				popImageY()
-				clearBoard()
-			}
-		}
-
- 	});
+	 	}
+	});
 }
 
 xory("x")
