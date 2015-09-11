@@ -23,6 +23,7 @@ body {
 	left:18px;
 	background:gray;
 	color:yellow;
+	font-size:20px;
 
 }
 
@@ -126,9 +127,22 @@ option {
     background-color: red;
 }
 
-#popUpImage {
+#popUpText {
 	color:orange;
 	font-size:20px;
+}
+#yImg {
+	width:225px;
+}
+
+#popUpTextY {
+	color:orange;
+	font-size:20px;
+}
+
+#reload {
+	width:126px;
+	margin:19px;
 }
 
 
