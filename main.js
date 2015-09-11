@@ -1,6 +1,6 @@
 var playerXWins = 0;
 var playerOWins = 0;
-var   winner = false;
+var winner = false;
 
 // // $(document).click(function (event) {    		
 //     $('#myDIV:visible').hide();
@@ -264,6 +264,7 @@ setInterval(function () {$('#quote').html(randoQuote())},9000);
 
 function clearBoard () {
 	$('#A1, #A2, #A3, #B1, #B2, #B3, #C1, #C2, #C3').prop('selectedIndex',0)
+	count = 0
 
 }
 
